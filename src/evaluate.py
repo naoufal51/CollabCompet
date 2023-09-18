@@ -54,10 +54,10 @@ if __name__ == "__main__":
     ppo.actor_critic.load_state_dict(
         torch.load("results/weights/actor_critic_512_entropy_coef_re.pth")
     )
-    scores = evaluate(env, brain_name, ppo, n_episodes=10000, train_mode=True)
+    scores = evaluate(env, brain_name, ppo, n_episodes=1000, train_mode=True)
 
     # save scores
-    save_scores(scores, "results/scores_eval_1000eps.npy")
+    save_scores(scores, "results/scores_eval_1000epsbis.npy")
 
     env.close()
     print(f"Mean Evaluation Score over {len(scores)} episodes: {np.mean(scores)}")
@@ -68,5 +68,5 @@ if __name__ == "__main__":
     plt.xlabel("Score")
     plt.ylabel("Number of Episodes")
     # save plot
-    plt.savefig("results/dist_scores_eval_1000eps.png")
+    plt.savefig("results/dist_scores_eval_1000epsbis.png")
     plt.close()

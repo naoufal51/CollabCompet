@@ -2,6 +2,8 @@
 
 In this project, we try to tackle a multi-agent system by leveraging advanced techniques in deep reinforcement learning. We use an implementation of the Proximal Policy Optimization (PPO) algorithm tailored for Unity's Tennis environment (continuous action space and multi-agent).
 
+**Notes:** This project shares a significant portion of code with my other [Continuous Control](https://github.com/naoufal51/ContinuousControlProject.git) project.
+
 ## Environment Details
 
 ### Overview

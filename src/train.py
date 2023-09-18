@@ -71,7 +71,7 @@ def train(
             )
             torch.save(
                 ppo.actor_critic.state_dict(),
-                "results/weights/actor_critic_512_entropy_coef_refactor.pth",
+                "results/weights/actor_critic_512_entropy_coef_re.pth",
             )
             max_score = np.mean(scores_window)
 
@@ -81,7 +81,7 @@ def train(
 if __name__ == "__main__":
     wandb.init(project="ppo_competition")
     set_seeds(42)
-    env = UnityEnvironment(file_name="./Tennis.app", seed=42, worker_id=1)
+    env = UnityEnvironment(file_name="./Tennis.app", seed=42, worker_id=0)
     brain_name = env.brain_names[0]
     brain = env.brains[brain_name]
     env_info = env.reset(train_mode=True)[brain_name]
@@ -107,8 +107,8 @@ if __name__ == "__main__":
         batch_size=512,
     )
 
-    plot_scores(scores, "results/scores_512_entropy_coef_0.005_refactor.png")
-    save_scores(scores, "results/scores_512_entropy_coef_0.005_refactor.npy")
+    plot_scores(scores, "results/scores_512_entropy_coef_0.005_re.png")
+    save_scores(scores, "results/scores_512_entropy_coef_0.005_re.npy")
 
     env.close()
     wandb.finish()
