@@ -4,6 +4,8 @@ In this project, we try to tackle a multi-agent system by leveraging advanced te
 
 **Notes:** This project shares a significant portion of code with my other [Continuous Control](https://github.com/naoufal51/ContinuousControlProject.git) project.
 
+https://github.com/naoufal51/CollabCompet/assets/15954923/11fbbe45-5c44-4347-b80a-37432b9bf6bc
+
 ## Environment Details
 
 ### Overview
